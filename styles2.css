@@ -1,0 +1,257 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.separator {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.music-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.music-container header {
+    text-align: center;
+    border-bottom: 2px solid #f00;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.music-container header h1 {
+    color: #c00;
+    margin: 0;
+}
+
+.music-container .player-controls {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#current-track-title {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+#current-track-info {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#audio-player {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.music-container .playlist-section h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.music-container .search-filter {
+    margin-bottom: 15px;
+}
+
+.music-container .search-filter input,
+.music-container .search-filter select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#playlist {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#playlist li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#playlist li:last-child {
+    border-bottom: none;
+}
+
+#playlist li:hover {
+    background-color: #f0f0f0;
+}
+
+#playlist li.active {
+    background-color: #c00;
+    color: white;
+    font-weight: bold;
+}
+
+#playlist li strong {
+    display: block;
+    font-size: 1.1em;
+}
+
+#playlist li span {
+    font-size: 0.8em;
+    color: #666;
+}
+
+#playlist li.active span {
+    color: #ffdddd;
+}
+
+.music-container footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.8em;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.pokedex-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.pokedex-container h1 {
+    color: #e44d26;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#pokemon-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#search-form button {
+    padding: 10px 15px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#search-form button:hover {
+    background-color: #2563eb;
+}
+
+#pokemon-result-container {
+    margin-top: 20px;
+    min-height: 250px;
+}
+
+.pokemon-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fafafa;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.pokemon-card h2 {
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.pokemon-card img {
+    width: 150px;
+    height: 150px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.type-badge {
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.error-message {
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.normal { background-color: #A8A77A; }
+.fire { background-color: #EE8130; }
+.water { background-color: #6390F0; }
+.electric { background-color: #F7D02C; }
+.grass { background-color: #7AC74C; }
+.ice { background-color: #96D9D6; }
+.fighting { background-color: #C22E28; }
+.poison { background-color: #A33EA1; }
+.ground { background-color: #E2BF65; }
+.flying { background-color: #A98FF3; }
+.psychic { background-color: #F95587; }
+.bug { background-color: #A6B91A; }
+.rock { background-color: #B6A136; }
+.ghost { background-color: #735797; }
+.dragon { background-color: #6F35FC; }
+.dark { background-color: #705746; }
+.steel { background-color: #B7B7CE; }
+.fairy { background-color: #D685AD; }

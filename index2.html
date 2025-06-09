@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Apps</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="music-container">
+        <header>
+            <h1>Música de Villanos Pokémon</h1>
+        </header>
+
+        <div class="player-controls">
+            <h2 id="current-track-title">Selecciona una canción</h2>
+            <p id="current-track-info">Juego: - | Villano: -</p>
+            <audio id="audio-player" controls></audio>
+        </div>
+
+        <div class="playlist-section">
+            <h2>Lista de Temas</h2>
+            <div class="search-filter">
+                <input type="text" id="search-input" placeholder="Buscar tema o juego...">
+                <select id="game-filter">
+                    <option value="">Todos los Juegos</option>
+                </select>
+            </div>
+            <ul id="playlist">
+            </ul>
+        </div>
+    </div>
+
+    <hr class="separator">
+
+    <main class="pokedex-container">
+        <h1>Pokédex</h1>
+        <form id="search-form">
+            <input type="text" id="pokemon-input" placeholder="Escribe nombre o numero del pokemon" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="pokemon-result-container">
+        </div>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+</html>
